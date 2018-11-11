@@ -1,0 +1,8 @@
+Mesa json
+     login                   Text
+     senha                   Text
+     logado                  Int
+     disponivel              Bool
+     UniqueMesa              login
+     deriving Show
+  
