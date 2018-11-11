@@ -8,3 +8,5 @@
 /mesas                      MesasR                            GET
 /mesa                       MesaAddR                          POST
 /mesa/#Text/#Text/nome      MesaEspecificaR                   GET
+
+/garcom/#Text/#Text/nome      GarcomEspecificaR               GET

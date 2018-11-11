@@ -5,4 +5,11 @@ Mesa json
      disponivel              Bool
      UniqueMesa              login
      deriving Show
+     
+Garcom json
+     nome                     Text
+     senha                    Text
+     logado                   Int
+     UniqueGarcom             nome 
+     deriving Show
   
