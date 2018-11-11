@@ -20,3 +20,9 @@ postMesaAddR = do
     produto <- requireJsonBody :: Handler Mesa
     pid <- runDB $ insert produto
     sendStatusJSON created201 (toJSON pid)
+
+getMesaEspecificaR ::Text  ->Text  -> Handler TypedContent
+getMesaEspecificaR pid senha = do 
+    addHeader "Access-Control-Allow-Origin" "*"
+    prod <- runDB $ selectList [MesaLogin ==. pid,MesaSenha ==. senha] []
+    sendStatusJSON ok200 (toJSON  prod)
