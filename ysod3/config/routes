@@ -14,3 +14,4 @@
 /garcom                       GarcomR                         GET 
 
 /ingredientes                        IngredientesR                                        GET
+/ingredienteB                       IngredienteAddR                            POST

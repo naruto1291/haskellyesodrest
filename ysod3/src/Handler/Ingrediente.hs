@@ -14,3 +14,9 @@ getIngredientesR = do
     prods <- runDB $ selectList [] [Asc IngredienteId]
     sendStatusJSON ok200 (toJSON  prods)
    
+postIngredienteAddR :: Handler TypedContent
+postIngredienteAddR = do
+    addHeader "Access-Control-Allow-Origin" "*"
+    produto <- requireJsonBody :: Handler Ingrediente -- fazer parse para objeto 
+    pid <- runDB $ insert produto -- 
+    sendStatusJSON created201 (toJSON  pid)
