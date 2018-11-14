@@ -15,3 +15,8 @@ Ingrediente json
      nome                    Text
      UniqueIngrediente       nome
      deriving Show
+     
+Categoria json
+     nome                    Text
+     UniqueCategoria         nome
+     deriving Show
