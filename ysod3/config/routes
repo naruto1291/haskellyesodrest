@@ -10,3 +10,4 @@
 /mesa/#Text/#Text/nome      MesaEspecificaR                   GET
 
 /garcom/#Text/#Text/nome      GarcomEspecificaR               GET
+/garcomB                      GarcomaddR                      POST
