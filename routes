@@ -1,0 +1,14 @@
+/static StaticR Static appStatic
+
+/favicon.ico FaviconR GET
+/robots.txt RobotsR GET
+
+/ HomeR GET 
+
+/mesas                      MesasR                            GET
+/mesa                       MesaAddR                          POST
+/mesa/#Text/#Text/nome      MesaEspecificaR                   GET
+
+/garcom/#Text/#Text/nome      GarcomEspecificaR               GET
+/garcomB                      GarcomaddR                      POST
+/garcom                       GarcomR                         GET 
