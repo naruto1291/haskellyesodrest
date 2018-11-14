@@ -20,3 +20,10 @@ postGarcomaddR = do
     produto <- requireJsonBody :: Handler Garcom
     pid <- runDB $ insert produto
     sendStatusJSON created201 (toJSON pid)   
+
+getGarcomR :: Handler TypedContent
+getGarcomR = do 
+    addHeader "Access-Control-Allow-Origin" "*"
+    prods <- runDB $ selectList [] [Asc GarcomNome]
+    sendStatusJSON ok200 (toJSON prods)
+    

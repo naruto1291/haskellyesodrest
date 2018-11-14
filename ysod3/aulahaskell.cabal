@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 14e91afe1d5ca54396302861a425f94f5118822430fcfa05020292b212fd07b6
+-- hash: 655530ca875136d3c4d2c95008ba1172120b00b35435db52c7252e02e2730c9b
 
 name:           aulahaskell
 version:        0.0.0
@@ -26,6 +26,7 @@ library
       Handler.Common
       Handler.Garcom
       Handler.Home
+      Handler.Ingrediente
       Handler.Mesa
       Import
       Import.NoFoundation

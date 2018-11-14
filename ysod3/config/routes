@@ -11,3 +11,6 @@
 
 /garcom/#Text/#Text/nome      GarcomEspecificaR               GET
 /garcomB                      GarcomaddR                      POST
+/garcom                       GarcomR                         GET 
+
+/ingredientes                        IngredientesR                                        GET

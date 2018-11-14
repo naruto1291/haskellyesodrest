@@ -10,3 +10,8 @@ Garcom json
      senha                    Text
      UniqueGarcom             nome 
      deriving Show
+     
+Ingrediente json
+     nome                    Text
+     UniqueIngrediente       nome
+     deriving Show
