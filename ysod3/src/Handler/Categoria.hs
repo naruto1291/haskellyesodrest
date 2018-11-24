@@ -14,3 +14,9 @@ getCategoriaR = do
    prods <- runDB $ selectList [] [Asc CategoriaNome]
    sendStatusJSON ok200 (toJSON prods )
    
+
+postCategoriaAddR :: Handler TypedContent
+postCategoriaAddR = do
+    produto <- requireJsonBody :: Handler Categoria 
+    pid <- runDB $ insert produto -- 
+    sendStatusJSON created201 (toJSON pid)

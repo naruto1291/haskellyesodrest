@@ -17,3 +17,4 @@
 /ingredienteB                       IngredienteAddR                            POST
 
 /categoria                        CategoriaR                  GET 
+/categoriaB                       CategoriaAddR               POST 
