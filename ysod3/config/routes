@@ -20,3 +20,4 @@
 /categoriaB                       CategoriaAddR               POST 
 
 /cardapio                   CardapioR           GET
+/cardapioB                  CardapioAddR        POST

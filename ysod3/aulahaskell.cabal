@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 7351969e80a6c8ff172c7022a07c2bd87e39eda21323dba7f9209eb528b6c21f
+-- hash: 40f6f371d77c3f76b283968533c1b7771f6dea6004cc116b6cd889531fb34a87
 
 name:           aulahaskell
 version:        0.0.0
@@ -23,6 +23,7 @@ library
   exposed-modules:
       Application
       Foundation
+      Handler.Cardapio
       Handler.Categoria
       Handler.Common
       Handler.Funcs
