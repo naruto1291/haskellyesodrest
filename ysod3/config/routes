@@ -5,10 +5,11 @@
 
 / HomeR GET 
 
-/mesas                      MesasR                            GET
-/mesa                       MesaAddR                          POST
-/mesa/#Text/#Text/nome      MesaEspecificaR                   GET
-/mesa/update/mesa/#MesaId/#Text  MesaupdateR                  PATCH OPTIONS
+/mesas                             MesasR                     GET
+/mesa                              MesaAddR                   POST
+/mesa/#Text/#Text/nome             MesaEspecificaR            GET
+/mesa/update/mesa/#MesaId/#Text    MesaupdateR                PATCH OPTIONS
+/mesa/uploga/mesa/#MesaId/#Int     MesaupdateLogadoR          PATCH OPTIONS
 
 /garcom/#Text/#Text/nome      GarcomEspecificaR               GET
 /garcomB                      GarcomaddR                      POST
