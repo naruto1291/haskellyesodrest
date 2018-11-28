@@ -20,3 +20,12 @@ Categoria json
      nome                    Text
      UniqueCategoria         nome
      deriving Show
+     
+Cardapio json
+     nome                    Text          
+     valor                   Double
+     categoria               CategoriaId    
+     disponivel              Bool
+     UniqueCardapio          nome        
+     deriving Show
+   

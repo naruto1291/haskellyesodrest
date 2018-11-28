@@ -18,3 +18,5 @@
 
 /categoria                        CategoriaR                  GET 
 /categoriaB                       CategoriaAddR               POST 
+
+/cardapio                   CardapioR           GET
