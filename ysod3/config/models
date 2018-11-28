@@ -28,4 +28,12 @@ Cardapio json
      disponivel              Bool
      UniqueCardapio          nome        
      deriving Show
-   
+
+Compra json
+    dataAbertura    Day
+    horaAbertura    UTCTime
+    dataFecha       Day
+    horaFecha       UTCTime
+    valor           Double
+    mesa            MesaId           -- UniqueFechamento idMesa rever e  errado
+    deriving Show

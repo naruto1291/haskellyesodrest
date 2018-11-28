@@ -19,6 +19,6 @@ postCardapioAddR :: Handler TypedContent
 postCardapioAddR = do
     anyOriginIn
     produto <- requireJsonBody :: Handler Cardapio 
-    pid <- runDB $ insert produto -- 
+    pid <- runDB $ insert produto
     sendStatusJSON created201 (toJSON pid)
 

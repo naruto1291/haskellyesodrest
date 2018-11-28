@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 40f6f371d77c3f76b283968533c1b7771f6dea6004cc116b6cd889531fb34a87
+-- hash: 30437bbb44f60395821b61b04bb7df96447f8f6b19110de22ac0498a199d1c46
 
 name:           aulahaskell
 version:        0.0.0
@@ -26,6 +26,7 @@ library
       Handler.Cardapio
       Handler.Categoria
       Handler.Common
+      Handler.Compra
       Handler.Funcs
       Handler.Garcom
       Handler.Home

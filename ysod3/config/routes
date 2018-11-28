@@ -21,3 +21,6 @@
 
 /cardapio                   CardapioR           GET
 /cardapioB                  CardapioAddR        POST
+
+/fechamento                 CompraR         GET
+
