@@ -26,3 +26,9 @@ getMesaEspecificaR pid senha = do
     addHeader "Access-Control-Allow-Origin" "*"
     prod <- runDB $ selectList [MesaLogin ==. pid,MesaSenha ==. senha] []
     sendStatusJSON ok200 (toJSON  prod)
+    
+optionsMesaupdateR :: MesaId -> Text -> Handler TypedContent
+optionsMesaupdateR _ _ = do 
+    anyOriginIn
+    sendStatusJSON ok200 (object [])
+    
