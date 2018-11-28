@@ -32,3 +32,21 @@ optionsMesaupdateR _ _ = do
     anyOriginIn
     sendStatusJSON ok200 (object [])
     
+patchMesaupdateR :: MesaId -> Text -> Handler TypedContent
+patchMesaupdateR pid nome = do 
+    _ <- runDB $ get404 pid
+    anyOriginIn
+    runDB $ update pid [MesaSenha =.  nome ] 
+    sendStatusJSON noContent204 (object [])
+    
+optionsMesaupdateLogadoR :: MesaId -> Int -> Handler TypedContent
+optionsMesaupdateLogadoR pid nome = do 
+    anyOriginIn
+    sendStatusJSON ok200 (object []) 
+ 
+patchMesaupdateLogadoR :: MesaId -> Int -> Handler TypedContent
+patchMesaupdateLogadoR pid nome = do 
+    _ <- runDB $ get404 pid
+    anyOriginIn
+    runDB $ update pid [MesaLogado =.  nome ] 
+    sendStatusJSON noContent204 (object [])
