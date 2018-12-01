@@ -7,7 +7,7 @@
 module Handler.Mesa where
 
 import Import
-
+import Handler.Funcs (anyOriginIn)
 getMesasR :: Handler TypedContent
 getMesasR = do 
     addHeader "Access-Control-Allow-Origin" "*"

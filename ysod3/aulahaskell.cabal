@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 30437bbb44f60395821b61b04bb7df96447f8f6b19110de22ac0498a199d1c46
+-- hash: 144069610e8486b9924cc1f6a8bbd191370940fb1f7e2fc5156c9a775bdcac37
 
 name:           aulahaskell
 version:        0.0.0
@@ -58,6 +58,7 @@ library
     , hjsmin >=0.1 && <0.3
     , http-conduit >=2.1 && <2.3
     , http-types
+    , jwt
     , monad-control >=0.3 && <1.1
     , monad-logger >=0.3 && <0.4
     , persistent >=2.0 && <2.8
@@ -71,6 +72,7 @@ library
     , unordered-containers
     , vector
     , wai
+    , wai-cors
     , wai-extra >=3.0 && <3.1
     , wai-logger >=2.2 && <2.4
     , warp >=3.0 && <3.3
@@ -113,6 +115,7 @@ executable aulahaskell
     , hjsmin >=0.1 && <0.3
     , http-conduit >=2.1 && <2.3
     , http-types
+    , jwt
     , monad-control >=0.3 && <1.1
     , monad-logger >=0.3 && <0.4
     , persistent >=2.0 && <2.8
@@ -126,6 +129,7 @@ executable aulahaskell
     , unordered-containers
     , vector
     , wai
+    , wai-cors
     , wai-extra >=3.0 && <3.1
     , wai-logger >=2.2 && <2.4
     , warp >=3.0 && <3.3

@@ -40,11 +40,17 @@ dependencies:
 - file-embed
 - safe
 - unordered-containers
+- file-embed
+- safe
+- unordered-containers
 - containers
 - vector
 - time
 - case-insensitive
 - wai
+- wai-cors
+- jwt
+- http-types
 - http-types
 
 # The library contains all of our application code. The executable
