@@ -37,3 +37,14 @@ Compra json
     valor           Double
     mesa            MesaId           -- UniqueFechamento idMesa rever e  errado
     deriving Show
+
+Pedido json
+    datap            Day
+    horap            UTCTime
+    pessoaPedido     Text
+    valor            Double
+    descricao        Text
+    statusPedido     Text
+    garcom           GarcomId
+    compra           CompraId
+    deriving Show
