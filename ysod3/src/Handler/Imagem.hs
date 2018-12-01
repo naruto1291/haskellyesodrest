@@ -28,3 +28,10 @@ optionsImagemR :: CardapioId -> Handler TypedContent
 optionsImagemR _  = do
    anyOriginIn
    sendStatusJSON ok200 (object [])
+   
+
+getImagemR :: CardapioId -> Handler TypedContent
+getImagemR pid = do
+    anyOriginIn
+    imagem <- liftIO $ readFile $ "dynamic" </> show (fromSqlKey pid)
+    sendStatusJSON ok200 $ toJSON $ decodeUtf8 imagem

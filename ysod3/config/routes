@@ -3,7 +3,7 @@
 /favicon.ico FaviconR GET
 /robots.txt RobotsR GET
 
-/imagem/#CardapioId                ImagemR                        POST  OPTIONS
+/imagem/#CardapioId                ImagemR                       GET POST  OPTIONS
 
 / HomeR POST 
 /home2 HomeDoisR POST 
