@@ -4,6 +4,7 @@
 /robots.txt RobotsR GET
 
 / HomeR POST 
+/home2 HomeDoisR POST 
 
 /mesas                             MesasR                     GET
 /mesa                              MesaAddR                   POST
