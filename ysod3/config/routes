@@ -31,3 +31,4 @@
 /fechamentoB                CompraAddR      POST
 
 /pedido                     PedidoR                          GET
+/pedidoB                    PedidoAddR                       POST 
