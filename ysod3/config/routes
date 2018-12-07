@@ -32,3 +32,4 @@
 
 /pedido                     PedidoR                          GET
 /pedidoB                    PedidoAddR                       POST 
+/pedido/#Day/data           PedidoPorData                    GET
