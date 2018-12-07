@@ -24,3 +24,8 @@ getPedidoR = do
    prods <- runDB $ selectList [] [Asc PedidoDatap]
    sendStatusJSON ok200 (toJSON  prods)
    
+getPedidoPorData :: Day -> Handler TypedContent
+getPedidoPorData d = do 
+    anyOriginIn
+    prods <- runDB $ selectList [ PedidoDatap ==. d ] [Asc PedidoId] 
+    sendStatusJSON ok200 (toJSON prods)
