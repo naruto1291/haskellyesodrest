@@ -27,3 +27,24 @@ getGarcomR = do
     prods <- runDB $ selectList [] [Asc GarcomNome]
     sendStatusJSON ok200 (toJSON prods)
     
+patchGarcomupdateR :: GarcomId -> Text -> Handler TypedContent
+patchGarcomupdateR pid nome = do 
+    _ <- runDB $ get404 pid
+    anyOriginIn
+    runDB $ update pid [GarcomSenha =. nome ] --readMaybe (  R.read ( unpack nome) :: Bool)
+    sendStatusJSON noContent204 (object [])
+    
+optionsGarcomupdateR :: GarcomId -> Text -> Handler TypedContent
+optionsGarcomupdateR pid nome = do 
+    anyOriginIn
+    sendStatusJSON ok200 (object [])
+    
+optionsGarcomaddR :: Handler TypedContent
+optionsGarcomaddR = do
+   anyOriginIn
+   sendStatusJSON ok200 (object [])
+   
+optionsGarcomR :: Handler TypedContent
+optionsGarcomR = do
+   anyOriginIn
+   sendStatusJSON ok200 (object [])
