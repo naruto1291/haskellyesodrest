@@ -35,9 +35,10 @@
 /cardapiopedido/getduas/#PedidoId                    CardapioPedidoDuploJoinR       GET   OPTIONS
 /cardapiopedido/qtcardapio/#CardapioPedidoId/#Int    Pedidoqtcard                   PATCH OPTIONS
 
-/categoria                        CategoriaR                  GET 
-/categoriaB                       CategoriaAddR               POST 
-/categoria/#CategoriaId/id        CategoriaporR               GET    
+/categoria                                        CategoriaR            GET    OPTIONS
+/categoriaB                                       CategoriaAddR         POST   OPTIONS
+/categoria/#CategoriaId/id                        CategoriaporR         GET    OPTIONS
+/categoria/upd/categoria/#CategoriaId/#Text       CategoriaupdateR      PATCH  OPTIONS 
 
 /cardapio                   CardapioR           GET
 /cardapioB                  CardapioAddR        POST
