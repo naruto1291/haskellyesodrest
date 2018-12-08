@@ -19,3 +19,14 @@ optionsIngreCardapioAddR :: Handler TypedContent
 optionsIngreCardapioAddR  = do
    anyOriginIn
    sendStatusJSON ok200 (object [])
+
+getIngreCardapioR :: CardapioId ->Handler TypedContent
+getIngreCardapioR pid = do 
+    anyOriginIn
+    prod <-runDB $ selectList [ IngredienteCardapioCardapio ==. pid  ] []
+    sendStatusJSON ok200 (toJSON  prod)
+   
+optionsIngreCardapioR :: CardapioId -> Handler TypedContent
+optionsIngreCardapioR _ = do
+   anyOriginIn
+   sendStatusJSON ok200 (object [])
