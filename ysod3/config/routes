@@ -27,8 +27,11 @@
 /ingredienteCardapio                                 IngreCardapiosR        GET     OPTIONS
 /ingredienteCardapio/#IngredienteCardapioId/apagar   IngreCardapioDelR      DELETE  OPTIONS
 
-/cardapiopedido/add               CardapioPedidoAddR         POST OPTIONS
-/cardapiopedido/todos             CardapioPedidoR            GET  OPTIONS
+/cardapiopedido/add                                CardapioPedidoAddR             POST  OPTIONS
+/cardapiopedido/todos                              CardapioPedidoR                GET   OPTIONS
+/cardapiopedido/join/#PedidoId                     CardapioPedidoJoinR            GET   OPTIONS
+/cardapiopedido/getduas/#PedidoId                  CardapioPedidoDuploJoinR       GET   OPTIONS
+/cardapiopedido/qtcardapio/#CardapioPedidoId/#Int  Pedidoqtcard                   PATCH OPTIONS
 
 /categoria                        CategoriaR                  GET 
 /categoriaB                       CategoriaAddR               POST 
