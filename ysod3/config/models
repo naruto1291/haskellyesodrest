@@ -54,3 +54,8 @@ CardapioPedido json
      pedido           PedidoId
      qtCardapio       Int
      deriving Show
+
+IngredienteCardapio json
+     cardapio               CardapioId
+     ingrediente            IngredienteId
+     deriving Show
