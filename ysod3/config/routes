@@ -42,8 +42,14 @@
 /cardapio                   CardapioR           GET
 /cardapioB                  CardapioAddR        POST
 
-/fechamento                 CompraR         GET
-/fechamentoB                CompraAddR      POST
+/fechamento/#CompraId/nome                   FechamentoUmR                         GET  OPTIONS
+/fechamento                                  FechamentoR                           GET  OPTIONS
+/fechamentoB                                 FechamentoAddR                        POST OPTIONS
+/fechamento/#Day/data                        FechamentoPorData                     GET  OPTIONS
+/fechamento/#Text/#Day/hora                  FechamentoPorHoraFechamentoR          GET  OPTIONS            --hora de fechamento
+/fechamentodata/dataFecha/#CompraId/#Day     FechamentodataUpdateR                 PATCH OPTIONS
+/fechamentohora/horaFecha/#CompraId/#Text    FechamentohoraUpdateR                 PATCH OPTIONS
+/fechamentovalor/valor/#CompraId/#Text       FechamentovalorUpdateR                PATCH  OPTIONS
 
 /pedido                             PedidoR                        GET OPTIONS
 /pedidoB                            PedidoAddR                     POST OPTIONS
