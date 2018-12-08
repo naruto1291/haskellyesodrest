@@ -48,3 +48,9 @@ Pedido json
     garcom           GarcomId
     compra           CompraId
     deriving Show
+
+CardapioPedido json 
+     cardapio         CardapioId
+     pedido           PedidoId
+     qtCardapio       Int
+     deriving Show
