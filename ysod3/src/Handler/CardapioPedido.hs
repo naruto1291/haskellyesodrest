@@ -57,3 +57,15 @@ optionsCardapioPedidoDuploJoinR :: PedidoId   -> Handler TypedContent
 optionsCardapioPedidoDuploJoinR _  = do
    anyOriginIn
    sendStatusJSON ok200 (object [])
+
+patchPedidoqtcard::CardapioPedidoId-> Int -> Handler TypedContent
+patchPedidoqtcard pid nome  = do
+   anyOriginIn
+   _ <- runDB $ get404 pid
+   runDB $ update pid [ CardapioPedidoQtCardapio =. nome ] --readMaybe 
+   sendStatusJSON noContent204 (object [])
+   
+optionsPedidoqtcard ::CardapioPedidoId-> Int -> Handler TypedContent
+optionsPedidoqtcard _ _  = do
+   anyOriginIn
+   sendStatusJSON ok200 (object [])
