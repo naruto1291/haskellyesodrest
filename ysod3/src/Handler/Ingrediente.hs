@@ -33,3 +33,15 @@ optionsIngredientesR :: Handler TypedContent
 optionsIngredientesR = do
                         anyOriginIn
                         sendStatusJSON ok200 (object [])
+                        
+patchIngredienteupdateR :: IngredienteId -> Text -> Handler TypedContent
+patchIngredienteupdateR pid nome = do 
+    _ <- runDB $ get404 pid
+    anyOriginIn
+    runDB $ update pid [IngredienteNome =.  nome ] --readMaybe 
+    sendStatusJSON noContent204 (object [])
+    
+optionsIngredienteupdateR :: IngredienteId -> Text -> Handler TypedContent
+optionsIngredienteupdateR pid nome = do 
+    anyOriginIn
+    sendStatusJSON ok200 (object [])
