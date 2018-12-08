@@ -6,8 +6,11 @@
 {-# LANGUAGE DeriveGeneric #-}
 module Handler.Mesa where
 
+import Handler.Funcs as F
+import Data.Text as T (pack)
+import Prelude as R (read)
 import Import
-import Handler.Funcs (anyOriginIn)
+
 getMesasR :: Handler TypedContent
 getMesasR = do 
     addHeader "Access-Control-Allow-Origin" "*"
