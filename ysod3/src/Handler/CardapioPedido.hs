@@ -9,7 +9,6 @@ module Handler.CardapioPedido where
 import Import
 import Handler.Funcs
 
-
 postCardapioPedidoAddR :: Handler TypedContent
 postCardapioPedidoAddR = do
     anyOriginIn
@@ -19,5 +18,16 @@ postCardapioPedidoAddR = do
 
 optionsCardapioPedidoAddR :: Handler TypedContent
 optionsCardapioPedidoAddR  = do
+   anyOriginIn
+   sendStatusJSON ok200 (object [])
+   
+getCardapioPedidoR :: Handler TypedContent
+getCardapioPedidoR = do 
+   anyOriginIn
+   prods <- runDB $ selectList [] [Asc IngredienteCardapioId] 
+   sendStatusJSON ok200 (toJSON prods)
+   
+optionsCardapioPedidoR :: Handler TypedContent
+optionsCardapioPedidoR  = do
    anyOriginIn
    sendStatusJSON ok200 (object [])
