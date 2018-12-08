@@ -27,6 +27,9 @@
 /ingredienteCardapio                                 IngreCardapiosR        GET     OPTIONS
 /ingredienteCardapio/#IngredienteCardapioId/apagar   IngreCardapioDelR      DELETE  OPTIONS
 
+/cardapiopedido/add               CardapioPedidoAddR         POST OPTIONS
+/cardapiopedido/todos             CardapioPedidoR            GET  OPTIONS
+
 /categoria                        CategoriaR                  GET 
 /categoriaB                       CategoriaAddR               POST 
 
