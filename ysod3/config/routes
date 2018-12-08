@@ -10,7 +10,7 @@
 
 /mesas                             MesasR                     GET
 /mesa                              MesaAddR                   POST
-/mesa/#Text/#Text/nome             MesaEspecificaR            GET
+/mesa/#Text/#Text/nome             MesaEspecificaR            GET   OPTIONS
 /mesa/update/mesa/#MesaId/#Text    MesaupdateR                PATCH OPTIONS
 /mesa/uploga/mesa/#MesaId/#Int     MesaupdateLogadoR          PATCH OPTIONS
 
