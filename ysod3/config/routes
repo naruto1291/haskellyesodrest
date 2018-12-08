@@ -43,6 +43,9 @@
 /fechamento                 CompraR         GET
 /fechamentoB                CompraAddR      POST
 
-/pedido                     PedidoR                          GET
-/pedidoB                    PedidoAddR                       POST 
-/pedido/#Day/data           PedidoPorData                    GET
+/pedido                             PedidoR                        GET OPTIONS
+/pedidoB                            PedidoAddR                     POST OPTIONS
+/pedido/#PedidoId/apagar            PedidoDelR                     DELETE OPTIONS
+/pedido/#Day/data                   PedidoPorData                  GET OPTIONS
+/pedido/#Text/hora                  PedidoPorHora                  GET OPTIONS
+/pedidofechamento/#CompraId/hora    PedidoPorFechamento            GET OPTIONS
