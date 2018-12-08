@@ -40,8 +40,9 @@
 /categoria/#CategoriaId/id                        CategoriaporR         GET    OPTIONS
 /categoria/upd/categoria/#CategoriaId/#Text       CategoriaupdateR      PATCH  OPTIONS 
 
-/cardapio                   CardapioR           GET
-/cardapioB                  CardapioAddR        POST
+/cardapio                                         CardapioR             GET    OPTIONS
+/cardapioB                                        CardapioAddR          POST   OPTIONS
+/cardapio/upda/cardapio/#CardapioId/#Text         CardapioupdateR       PATCH OPTIONS 
 
 /fechamento/#CompraId/nome                   FechamentoUmR                         GET  OPTIONS
 /fechamento                                  FechamentoR                           GET  OPTIONS
