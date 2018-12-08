@@ -7,6 +7,9 @@
 module Handler.Ingrediente where
 
 import Import
+import Data.Text as T (pack)
+import Prelude as R (read)
+import Handler.Funcs (anyOriginIn)
 
 getIngredientesR :: Handler TypedContent
 getIngredientesR = do 
@@ -20,3 +23,13 @@ postIngredienteAddR = do
     produto <- requireJsonBody :: Handler Ingrediente -- fazer parse para objeto 
     pid <- runDB $ insert produto -- 
     sendStatusJSON created201 (toJSON  pid)
+    
+optionsIngredienteAddR :: Handler TypedContent
+optionsIngredienteAddR = do
+                         anyOriginIn
+                         sendStatusJSON ok200 (object [])
+
+optionsIngredientesR :: Handler TypedContent
+optionsIngredientesR = do
+                        anyOriginIn
+                        sendStatusJSON ok200 (object [])
