@@ -14,9 +14,11 @@
 /mesa/update/mesa/#MesaId/#Text    MesaupdateR                PATCH OPTIONS
 /mesa/uploga/mesa/#MesaId/#Int     MesaupdateLogadoR          PATCH OPTIONS
 
-/garcom/#Text/#Text/nome      GarcomEspecificaR               GET
-/garcomB                      GarcomaddR                      POST
-/garcom                       GarcomR                         GET 
+/garcom/#Text/#Text/nome               GarcomEspecificaR      GET OPTIONS
+/garcom                                GarcomR                GET OPTIONS
+/garcomB                               GarcomaddR             POST  OPTIONS
+/garcom/#GarcomId/apagar               GarcomDelR             DELETE OPTIONS
+/garcom/update/garcom/#GarcomId/#Text  GarcomupdateR          PATCH OPTIONS 
 
 /ingredientes                                        IngredientesR          GET    OPTIONS
 /ingredienteB                                        IngredienteAddR        POST   OPTIONS
@@ -27,11 +29,11 @@
 /ingredienteCardapio                                 IngreCardapiosR        GET     OPTIONS
 /ingredienteCardapio/#IngredienteCardapioId/apagar   IngreCardapioDelR      DELETE  OPTIONS
 
-/cardapiopedido/add                                CardapioPedidoAddR             POST  OPTIONS
-/cardapiopedido/todos                              CardapioPedidoR                GET   OPTIONS
-/cardapiopedido/join/#PedidoId                     CardapioPedidoJoinR            GET   OPTIONS
-/cardapiopedido/getduas/#PedidoId                  CardapioPedidoDuploJoinR       GET   OPTIONS
-/cardapiopedido/qtcardapio/#CardapioPedidoId/#Int  Pedidoqtcard                   PATCH OPTIONS
+/cardapiopedido/add                                  CardapioPedidoAddR             POST  OPTIONS
+/cardapiopedido/todos                                CardapioPedidoR                GET   OPTIONS
+/cardapiopedido/join/#PedidoId                       CardapioPedidoJoinR            GET   OPTIONS
+/cardapiopedido/getduas/#PedidoId                    CardapioPedidoDuploJoinR       GET   OPTIONS
+/cardapiopedido/qtcardapio/#CardapioPedidoId/#Int    Pedidoqtcard                   PATCH OPTIONS
 
 /categoria                        CategoriaR                  GET 
 /categoriaB                       CategoriaAddR               POST 
