@@ -18,9 +18,14 @@
 /garcomB                      GarcomaddR                      POST
 /garcom                       GarcomR                         GET 
 
-/ingredientes                                        IngredientesR              GET   OPTIONS
-/ingredienteB                                        IngredienteAddR            POST  OPTIONS
-/ingrediente/updat/ingrediente/#IngredienteId/#Text  IngredienteupdateR         PATCH OPTIONS 
+/ingredientes                                        IngredientesR          GET    OPTIONS
+/ingredienteB                                        IngredienteAddR        POST   OPTIONS
+/ingrediente/updat/ingrediente/#IngredienteId/#Text  IngredienteupdateR     PATCH  OPTIONS 
+
+/ingredienteCardapioB                                IngreCardapioAddR      POST    OPTIONS
+/ingredienteCardapio/#CardapioId                     IngreCardapioR         GET     OPTIONS           
+/ingredienteCardapio                                 IngreCardapiosR        GET     OPTIONS
+/ingredienteCardapio/#IngredienteCardapioId/apagar   IngreCardapioDelR      DELETE  OPTIONS
 
 /categoria                        CategoriaR                  GET 
 /categoriaB                       CategoriaAddR               POST 
