@@ -53,3 +53,9 @@ patchMesaupdateLogadoR pid nome = do
     anyOriginIn
     runDB $ update pid [MesaLogado =.  nome ] 
     sendStatusJSON noContent204 (object [])
+
+optionsMesaEspecificaR :: Text -> Text -> Handler TypedContent
+optionsMesaEspecificaR _ _ = do
+                              anyOriginIn
+                              sendStatusJSON noContent204 (object [])
+     
