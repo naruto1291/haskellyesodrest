@@ -18,8 +18,8 @@
 /garcomB                      GarcomaddR                      POST
 /garcom                       GarcomR                         GET 
 
-/ingredientes                                        IngredientesR              GET
-/ingredienteB                                        IngredienteAddR            POST
+/ingredientes                                        IngredientesR              GET   OPTIONS
+/ingredienteB                                        IngredienteAddR            POST  OPTIONS
 /ingrediente/updat/ingrediente/#IngredienteId/#Text  IngredienteupdateR         PATCH OPTIONS 
 
 /categoria                        CategoriaR                  GET 
