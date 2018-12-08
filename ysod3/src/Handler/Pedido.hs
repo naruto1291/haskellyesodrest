@@ -29,3 +29,56 @@ getPedidoPorData d = do
     anyOriginIn
     prods <- runDB $ selectList [ PedidoDatap ==. d ] [Asc PedidoId] 
     sendStatusJSON ok200 (toJSON prods)
+
+getPedidoPorHora :: Text -> Handler TypedContent
+getPedidoPorHora d = do 
+    anyOriginIn
+    utct <- liftIO getCurrentTime
+    prods <- runDB $ selectList [PedidoHorap ==. utct ] [Asc PedidoId] 
+    sendStatusJSON ok200 (toJSON prods)
+    
+getPedidoPorFechamento :: CompraId -> Handler TypedContent
+getPedidoPorFechamento d = do 
+    anyOriginIn
+    prods <- runDB $ selectList [PedidoCompra ==. d ] [Asc PedidoId] 
+    sendStatusJSON ok200 (toJSON prods)
+
+optionsPedidoDescricaoR :: PedidoId -> Text -> Handler TypedContent
+optionsPedidoDescricaoR pid nome = do 
+    anyOriginIn
+    sendStatusJSON ok200 (object [])
+
+optionsPedidostatusR :: PedidoId -> Text -> Handler TypedContent
+optionsPedidostatusR pid nome = do 
+    anyOriginIn
+    sendStatusJSON ok200 (object [])
+
+optionsPedidoGarcomidR :: PedidoId -> GarcomId -> Handler TypedContent
+optionsPedidoGarcomidR pid nome = do 
+    anyOriginIn
+    sendStatusJSON ok200 (object [])
+
+optionsPedidoR :: Handler TypedContent
+optionsPedidoR  = do
+   anyOriginIn
+   sendStatusJSON ok200 (object [])
+
+optionsPedidoAddR :: Handler TypedContent
+optionsPedidoAddR  = do
+   anyOriginIn
+   sendStatusJSON ok200 (object [])
+
+optionsPedidoPorData :: Day -> Handler TypedContent
+optionsPedidoPorData _  = do
+   anyOriginIn
+   sendStatusJSON ok200 (object [])
+
+optionsPedidoPorHora :: Text -> Handler TypedContent
+optionsPedidoPorHora _  = do
+   anyOriginIn
+   sendStatusJSON ok200 (object [])
+
+optionsPedidoPorFechamento :: CompraId -> Handler TypedContent
+optionsPedidoPorFechamento _  = do
+   anyOriginIn
+   sendStatusJSON ok200 (object [])
