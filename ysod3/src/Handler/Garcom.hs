@@ -48,3 +48,8 @@ optionsGarcomR :: Handler TypedContent
 optionsGarcomR = do
    anyOriginIn
    sendStatusJSON ok200 (object [])
+   
+optionsGarcomEspecificaR :: Text -> Text -> Handler TypedContent
+optionsGarcomEspecificaR pid senha = do
+    anyOriginIn
+    sendStatusJSON ok200 (object [])
