@@ -82,3 +82,11 @@ optionsPedidoPorFechamento :: CompraId -> Handler TypedContent
 optionsPedidoPorFechamento _  = do
    anyOriginIn
    sendStatusJSON ok200 (object [])
+
+deletePedidoDelR ::PedidoId-> Handler TypedContent 
+deletePedidoDelR  pid =do
+        anyOriginIn
+        _ <- runDB $ get404 pid
+        runDB $ delete pid
+        sendStatusJSON noContent204 (object [])
+        
