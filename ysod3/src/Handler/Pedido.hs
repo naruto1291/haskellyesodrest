@@ -90,3 +90,7 @@ deletePedidoDelR  pid =do
         runDB $ delete pid
         sendStatusJSON noContent204 (object [])
         
+optionsPedidoDelR ::  PedidoId -> Handler TypedContent
+optionsPedidoDelR pid =do
+    anyOriginIn
+    sendStatusJSON ok200 (object [])
