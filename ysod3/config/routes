@@ -17,17 +17,17 @@
 /garcom/#Text/#Text/nome               GarcomEspecificaR      GET OPTIONS
 /garcom                                GarcomR                GET OPTIONS
 /garcomB                               GarcomaddR             POST  OPTIONS
-/garcom/#GarcomId/apagar               GarcomDelR             DELETE OPTIONS
+-- /garcom/#GarcomId/apagar               GarcomDelR             DELETE OPTIONS
 /garcom/update/garcom/#GarcomId/#Text  GarcomupdateR          PATCH OPTIONS 
 
 /ingredientes                                        IngredientesR          GET    OPTIONS
 /ingredienteB                                        IngredienteAddR        POST   OPTIONS
 /ingrediente/updat/ingrediente/#IngredienteId/#Text  IngredienteupdateR     PATCH  OPTIONS 
 
-/ingredienteCardapioB                                IngreCardapioAddR      POST    OPTIONS
-/ingredienteCardapio/#CardapioId                     IngreCardapioR         GET     OPTIONS           
-/ingredienteCardapio                                 IngreCardapiosR        GET     OPTIONS
-/ingredienteCardapio/#IngredienteCardapioId/apagar   IngreCardapioDelR      DELETE  OPTIONS
+/ingredienteCardapio/#CardapioId                        IngreCardapioR         GET     OPTIONS               --   cardapio do ingrediente
+/ingredienteCardapio                                    IngreCardapiosR         GET    OPTIONS
+/ingredienteCardapioB                                   IngreCardapioAddR      POST    OPTIONS
+-- /ingredienteCardapio/#IngredienteCardapioId/apagar   IngreCardapioDelR      DELETE  OPTIONS
 
 /cardapiopedido/add                                  CardapioPedidoAddR             POST  OPTIONS
 /cardapiopedido/todos                                CardapioPedidoR                GET   OPTIONS
@@ -55,7 +55,7 @@
 
 /pedido                             PedidoR                        GET OPTIONS
 /pedidoB                            PedidoAddR                     POST OPTIONS
-/pedido/#PedidoId/apagar            PedidoDelR                     DELETE OPTIONS
+-- /pedido/#PedidoId/apagar            PedidoDelR                     DELETE OPTIONS
 /pedido/#Day/data                   PedidoPorData                  GET OPTIONS
 /pedido/#Text/hora                  PedidoPorHora                  GET OPTIONS
 /pedidofechamento/#CompraId/hora    PedidoPorFechamento            GET OPTIONS

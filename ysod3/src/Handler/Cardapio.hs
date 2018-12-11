@@ -8,6 +8,8 @@ module Handler.Cardapio where
 
 import Import
 import Handler.Funcs (anyOriginIn)
+import Data.Text as T (pack)
+import Prelude as R (read)
 
 getCardapioR :: Handler TypedContent
 getCardapioR = do 

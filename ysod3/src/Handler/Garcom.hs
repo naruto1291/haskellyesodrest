@@ -7,6 +7,7 @@
 module Handler.Garcom where
 
 import Import
+import Handler.Funcs (anyOriginIn)
 
 getGarcomEspecificaR ::Text  ->Text  -> Handler TypedContent
 getGarcomEspecificaR pid senha = do 

@@ -20,6 +20,7 @@ optionsIngreCardapioAddR  = do
    anyOriginIn
    sendStatusJSON ok200 (object [])
 
+
 getIngreCardapioR :: CardapioId ->Handler TypedContent
 getIngreCardapioR pid = do 
     anyOriginIn

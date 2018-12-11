@@ -7,6 +7,7 @@
 module Handler.Categoria where
 
 import Import
+import Handler.Funcs (anyOriginIn)
 
 getCategoriaR :: Handler TypedContent
 getCategoriaR = do 
